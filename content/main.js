@@ -26,6 +26,9 @@ function delete_ad() {
         }
     });
 
+    // 猜你想搜
+    document.querySelector("[tpl='recommend_list']")?.remove()
+
     // 翻译中的 精彩视频
     document.querySelector(".video-wrap_312kw")?.parentElement?.remove();
     // 翻译中的 第二方广告

@@ -13,6 +13,10 @@ a{
     background-color:#f3f3f3;
 }
 
+/* 背景颜色 */
+body{
+    background: linear-gradient(265deg, #f6f9fc 0%, #e6f0f5 100%);
+}
 
 
 /* 开关样式 */

@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>设置 - 关于</title>
+    <title>设置 - 右侧栏</title>
     <link rel="stylesheet" href="setting_basic.css">
     <script src="setting_basic.js"></script>
 </head>
@@ -19,20 +19,30 @@
             </a>
         </div>
         <div class="item right">
-            <a href="setting-right.html">
+            <a href="#">
                 <p>右侧栏</p>
             </a>
         </div>
         <div class="item about">
-            <a href="#">
+            <a href="setting.html">
                 <p>关于</p>
             </a>
         </div>
     </div>
     <div class="content">
-        <!-- 关于 -->
-        <h2>关于插件:</h2>
-        <p>GitHub: <a href="https://github.com/hallo-py/Optimize_baidu_website">Optimize_baidu_website</a></p>
+        <!-- 右侧栏 -->
+        <h2>右侧栏设置:</h2>
+
+        <label>
+            <p>显示百度AI模块:</p>
+            <div class="btn_on_off show_baidu_ai">
+                <span class="btn-on-circle"></span>
+                <span class="btn-on-text">ON</span>
+            </div>
+        </label>
+
+        
+        <button id="saveBtn" href="javascript:void(0);">保存</button>
     </div>
 </body>
 </html>

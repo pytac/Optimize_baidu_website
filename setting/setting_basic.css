@@ -59,9 +59,9 @@ a{
 
 /* 导航栏内容导航 */
 .item{
-    border: 2px,solid,#f3f3f3;
+    border: 2px,solid,#ffffff;
     border-radius: 30px;
-    background-color:#f3f3f3;
+    background-color:#ffffff;
 }
 
 /* 背景颜色 */
@@ -79,7 +79,7 @@ body{
 /* 导航栏 */
 .sider {
   overflow: hidden;
-  background-color: #f3f3f3;
+  background-color: #ffffff;
 }
 
 /* 导航栏 */

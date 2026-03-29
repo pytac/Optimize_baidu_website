@@ -36,24 +36,21 @@
             // 你可以在其他地方监听这个事件
             document.dispatchEvent(customEvent);
 
-            console.log("AfterDrag 自定义事件已触发。");
+            // console.log("AfterDrag 自定义事件已触发。");
         }
 
 
-        // ----- 工具函数 ：根据数据创建列表项 (使用 select_item 属性存储标识) -----
+        // ----- 工具函数 ：根据数据创建列表项 (使用 data-item-id 属性存储标识，移除 badge-id) -----
         function createItemElement(id, text) {
             const li = document.createElement('li');
             li.className = 'select_item'; // 改为 select_item，匹配内部样式
-            // 使用自定义属性 select_item 存储唯一标识，避免占用标准 id
-            li.setAttribute('select_item', id);
+            // 使用 data-item-id 属性存储唯一标识，不再显示在页面上
+            li.setAttribute('data-item-id', id);
             const textSpan = document.createElement('span');
             textSpan.className = 'select_item-text';
             textSpan.textContent = text;
-            const idBadge = document.createElement('span');
-            idBadge.className = 'badge-id';
-            idBadge.textContent = id;          // 显示id便于识别
-            li.appendChild(textSpan);
-            li.appendChild(idBadge);
+            // <--- 移除了 badge-id 相关的代码 --->
+            li.appendChild(textSpan); // 只附加文本部分
             return li;
         }
 
@@ -107,6 +104,24 @@
             onEnd: onDragEnd
         });
 
+        // ----- 保留原有的排序信息获取函数 (方便调试/外部调用) -----
+        // 注意：获取ID时，现在使用 dataset.itemId
+        window.getSortingInfo = function() {
+            // 注意：选择器改为 .select_item，以匹配新的类名
+            const todoItems = Array.from(document.querySelectorAll('#list-todo .select_item')).map(li => ({
+                id: li.dataset.itemId, // 从 data-item-id 属性获取ID
+                content: li.querySelector('.select_item-text')?.textContent || li.innerText,
+            }));
+            const deleteItems = Array.from(document.querySelectorAll('#list-delete .select_item')).map(li => ({
+                id: li.dataset.itemId, // 从 data-item-id 属性获取ID
+                content: li.querySelector('.select_item-text')?.textContent || li.innerText,
+            }));
+            return {
+                show: todoItems,
+                delete: deleteItems
+            };
+        };
+
         // ----- 提供一个默认的初始数据，使页面打开时就有示例 -----
         const defaultData = {
             show: [
@@ -116,23 +131,6 @@
             delete: []
         };
         updateBoards(defaultData);
-
-        // ----- 保留原有的排序信息获取函数 (方便调试/外部调用) -----
-        window.getSortingInfo = function() {
-            // 注意：选择器改为 .select_item，以匹配新的类名
-            const todoItems = Array.from(document.querySelectorAll('#list-todo .select_item')).map(li => ({
-                id: li.getAttribute('select_item'),
-                content: li.querySelector('.select_item-text')?.textContent || li.innerText,
-            }));
-            const deleteItems = Array.from(document.querySelectorAll('#list-delete .select_item')).map(li => ({
-                id: li.getAttribute('select_item'),
-                content: li.querySelector('.select_item-text')?.textContent || li.innerText,
-            }));
-            return {
-                show: todoItems,
-                delete: deleteItems
-            };
-        };
     }
 
     // 根据文档加载状态执行初始化
@@ -159,3 +157,10 @@ updateBoards: 更新内容
 getSortingInfo: 获取排序信息
 @return {Object} - { show: [ {id, content}, ... ], delete: [ {id, content}, ... ] }
 */
+
+// 监听自定义的 AfterDrag 事件，以便在拖拽结束后保存数据
+document.addEventListener("AfterDrag", () => {
+    const sort = window.getSortingInfo();
+    chrome.storage.sync.set({ "right_list": sort });
+    console.log("after_drag_sort", sort); // 修改日志标签以便区分
+});

@@ -78,34 +78,35 @@ chrome.storage.sync.get(["on_off_opt"], (result) => {
 function core_function() {
 
 // ================== 初始化 ==================
-console.log('开始篡改...');
+    console.log('开始篡改...');
 
-// let finished = false;
-delete_ad();
-delete_annoy();
+    // let finished = false;
+    delete_ad();
+    delete_annoy();
 
-// 输出
-// finished = true;
-document.dispatchEvent(new CustomEvent('finished'));
-console.log('篡改完毕...');
+    // 输出
+    // finished = true;
+    document.dispatchEvent(new CustomEvent('finished'));
+    console.log('篡改完毕...');
+
+    // 检测切换页面
+    document.querySelector(".page-inner_2jZi2").querySelectorAll("a").forEach(item => {
+        item.addEventListener("click", () => {
+            window.location.href = item.href;
+        });
+    });
 
 // ================== 初始化 结束 ==================
 
 }
 core_function();
 
-
+var old_herf = window.location.href;
 // 监听动态变化
 const observer = new MutationObserver(() => {
-    delete_ad();
-    moveAIToRight();
-
-    // 以免死循环
-    if ((document.querySelector("#content_right").dataset.finished??'false') !== 'true'){
-        core_function();
-    }
     console.log('observer 发现 DOM 变化');
-    // if (finished) document.querySelector(".output").insertAdjacentHTML("afterbegin", `<p>篡改完毕</p>\n<br>`);
+    delete_ad();
+    delete_annoy();
 });
 observer.observe(document.body, { childList: true, subtree: true });
 
@@ -114,8 +115,4 @@ observer.observe(document.body, { childList: true, subtree: true });
 /*
 TODO:
 优化界面：添加 李逵的玻璃（流体玻璃）
-添加百度AI入口 （免费！！又可以加分！！！！）
-- 图片: https://chat.baidu.com/search?enter_type=a_4&extParams=%7B%22openInputMode%22%3A%228%22%2C%22inputPanelExt%22%3A%7B%22showPrompt%22%3Afalse%2C%22showPanel%22%3Afalse%7D%7D&word= [qustion] &sa=re_dl_4
-- LLM: https://chat.baidu.com/search?word= [question] &extParams=%7B%22aPageWord%22%3A%22%E8%9D%B4%E8%9D%B6%22%2C%22enter_type%22%3A%22a_62112%22%2C%22sa%22%3A%22a_62112_doudi%22%7D
-
 */

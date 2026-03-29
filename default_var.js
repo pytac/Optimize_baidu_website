@@ -1,9 +1,9 @@
 var default_var = {
     "right_list":{
         "show": [
-            {"item":"show_baidu_ai","content":"百度AI模块"},
-            {"item":"extract","content":"提取模块"},
-            {"item":"core_ai","content":"百度AI助手"},
+            {"item":"extract","content":"提取模块","id":1},
+            {"item":"show_baidu_ai","content":"百度AI搜索模块","id":2},
+            {"item":"core_ai","content":"百度AI问答助手","id":3},
         ],
         "delete": [
 

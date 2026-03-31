@@ -210,9 +210,8 @@ function extract_things(right_col, left_col, params){
 
     // 官网处理
     const guanwang = left_col.querySelector('a[href= "https://aiqicha.baidu.com/feedback/official?from=baidu &type=gw "]')?.closest( ".c-container ");
-    console.log( "guanwang: ", guanwang);
+    // console.log( "guanwang: ", guanwang);
     if (guanwang) {
-        // console.log( ");
         const link = guanwang.querySelector( ".sc-link ")?.href;
         if (link) {
             const target = right_col.querySelector('.extract_guanwang');
@@ -221,19 +220,19 @@ function extract_things(right_col, left_col, params){
     }
     // 翻译处理
     const translate = left_col.querySelector( ".word-fy-card_604a5 ")?.closest( ".c-container ");
-    console.log( "translate: ", translate);
+    // console.log( "translate: ", translate);
     if (translate) {
         translate.style[ "scrollMarginTop "] = '80px';
         const target = right_col.querySelector('.extract_translate');
         if (target) {
-            target.innerHTML = `定位: <a href= "javascript:void(0); ">${translate.querySelector( ".cosc-title-slot ").textContent} </a >`;
+            target.innerHTML = `定位: <a href= "javascript:void(0); ">${translate.querySelector( ".cosc-title-slot ").textContent} </a>`;
             target.onclick = () => translate.scrollIntoView({ behavior: 'smooth' });
         }
     }
 
     // 百度百科
     const baike = left_col.querySelector( ".is-entry_4m0sD ")?.closest( ".c-container ");
-    console.log( "baike: ", baike);
+    // console.log( "baike: ", baike);
     if (baike) {
         baike.style[ "scrollMarginTop "] = '80px';
 
@@ -242,7 +241,7 @@ function extract_things(right_col, left_col, params){
         if (link) {
             const target = right_col.querySelector('.extract_baike');
             if (target){
-                target.innerHTML = `定位: <a class= "baike_pos " href= "javascript:void(0); ">${text} </a > &nbsp;或 &nbsp; <a href= "${link.href} " >直接跳转 </a >`;
+                target.innerHTML = `定位: <a class= "baike_pos " href= "javascript:void(0); ">${text} </a > &nbsp;或 &nbsp; <a href="${link.href}">直接跳转 </a >`;
                 target.querySelector( ".baike_pos ").onclick = () => baike.scrollIntoView({ behavior: 'smooth' });
             }
         }
@@ -319,7 +318,6 @@ chrome.storage.sync.get('right_list', (result) => {
         else if (item.id === 3) core_ai(right_col, left_col, params);
     }
     right_col.dataset.finished = 'true';
-    console.log("right_col.dataset.finished:",right_col.dataset.finished);
 });
 
 

@@ -195,7 +195,7 @@ async function moveAIToRight(right_col, left_col, params) {
     }
 }
 
-function extract_things(right_col, left_col, params){
+async function extract_things(right_col, left_col, params){
     // 添加右侧栏 div
     const innerhtml=`
     <div class="extract">
@@ -247,6 +247,18 @@ function extract_things(right_col, left_col, params){
             }
         }
     }
+
+    // 删除
+    await chrome.storage.sync.get(['donot_show_extract_on_2nd_pg'], async (result) => {
+        const is_not_show = result.donot_show_extract_on_2nd_pg;
+        
+        if (is_not_show){
+            if ((params.get("pn")??'0') !== '0' || (params.get("pn")??'00') !== '00'){
+                // 不在第一页
+                document.querySelector('.extract').remove();
+            }
+        }
+    });
 }
 
 function core_ai(right_col, left_col, params){
@@ -316,8 +328,8 @@ chrome.storage.sync.get('right_list', (result) => {
     for (let item of show) {
         console.log("read info:",item);
         if (item.id === 1) extract_things(right_col, left_col, params);
-        else if (item.id === 2) moveAIToRight(right_col, left_col, params);
-        else if (item.id === 3) core_ai(right_col, left_col, params);
+        else if (item.id === 2) core_ai(right_col, left_col, params);
+        else if (item.id === 3) moveAIToRight(right_col, left_col, params);
     }
     right_col.dataset.finished = 'true';
 });

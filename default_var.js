@@ -10,14 +10,14 @@ var default_var = {
     "right_list":{
         "show": [
             {"item":"extract","content":"提取模块","id":1},
-            {"item":"core_ai","content":"AI问答助手","id":3},
-            {"item":"show_baidu_ai","content":"百度AI搜索模块","id":2},
+            {"item":"core_ai","content":"AI问答助手","id":2},
+            {"item":"show_baidu_ai","content":"百度AI搜索模块","id":3},
         ],
         "delete": [
 
         ]
     },
-    // "donot_show_extract_on_2nd_pg": true, // 是否在第二页不显示提取模块
+    "donot_show_extract_on_2nd_pg": true, // 是否在第二页不显示提取模块
 
     // 左侧设置
     "guanwang_first": true,

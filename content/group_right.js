@@ -331,6 +331,13 @@ chrome.storage.sync.get('right_list', (result) => {
         else if (item.id === 2) core_ai(right_col, left_col, params);
         else if (item.id === 3) moveAIToRight(right_col, left_col, params);
     }
+    
+    // 如果右侧栏为空，隐藏右侧栏 并 将左侧栏宽度设置为 90%
+    if (right_col.children.length === 0){
+        right_col.style.display = 'none';
+        right_col.style.width = '0';
+        left_col.style.width = '90%';
+    }
     right_col.dataset.finished = 'true';
 });
 

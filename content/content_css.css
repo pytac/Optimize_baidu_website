@@ -8,3 +8,7 @@
     border-image: initial;
     border-radius: 50px;
 }
+
+#content_left > div {
+    width: 100%;
+}

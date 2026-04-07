@@ -210,13 +210,13 @@ async function extract_things(right_col, left_col, params){
     right_col.insertAdjacentHTML('beforeend', innerhtml);
 
     // 官网处理
-    const guanwang = left_col.querySelector('a[href= "https://aiqicha.baidu.com/feedback/official?from=baidu &type=gw "]')?.closest( ".c-container ");
-    // console.log( "guanwang: ", guanwang);
+    const guanwang = left_col.querySelector('a[href="https://aiqicha.baidu.com/feedback/official?from=baidu&type=gw"]')?.closest( ".c-container");
+    console.log( "guanwang: ", guanwang);
     if (guanwang) {
         const link = guanwang.querySelector( ".sc-link ")?.href;
         if (link) {
             const target = right_col.querySelector('.extract_guanwang');
-            if (target) target.innerHTML =  `跳转:` `<a href="${link}">${guanwang.querySelector(".sc-link").textContent}</a>` ;
+            if (target) target.innerHTML =  `跳转: <a href="${link}">${guanwang.querySelector(".sc-link").textContent}</a>` ;
         }
     }
     // 翻译处理

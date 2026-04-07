@@ -61,6 +61,9 @@ function delete_annoy() {
     // 删除 ai_ask 模块（用户指定删除）
     document.querySelector('div[tpl="ai_ask"]')?.remove();
 
+    // 删除 返回百度首页
+    document.querySelector("a.toindex")?.remove()
+
     // 删除“听”按钮
     // document.querySelector("div[rl-type='stop']")?.remove();
     // document.querySelector("div.tts-video-continue")?.remove();

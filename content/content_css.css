@@ -32,7 +32,8 @@
 }
 
 /*百度选项卡原边框去除(original_website_result)*/
-.sc-cover-card{
+.left-inside > ._content-border_{
+    width: 90% !important;
     background-color: none !important;
     border: none !important;
     box-shadow: none !important;
@@ -46,13 +47,18 @@
     border-radius: none !important;
 }
 
-/**/
-._content-border{
-    width: none !important;
-    height: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    background-color: none !important;
-    border-radius: none !important;
-    border-radius: 50px;
+/*底侧切换栏*/
+.page-inner_2jZi2 > strong{
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgb(255, 255, 255) !important;
+    border-radius: 40px !important;
+}
+
+strong > .page-item{
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgb(255, 255, 255) !important;
+    border-radius: 40px !important;
+}
 }

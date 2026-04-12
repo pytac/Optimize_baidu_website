@@ -1,4 +1,5 @@
-test\
-.vscode\
-__pycache__\
-.gitignore
+test/
+.vscode/
+__pycache__/
+/content/moveAIToRight_old.js
+/.gitignore

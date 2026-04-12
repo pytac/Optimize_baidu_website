@@ -86,6 +86,13 @@ function core_function() {
     // let finished = false;
     delete_ad();
     delete_annoy();
+    // 左侧栏添加 div 标签
+    document.querySelectorAll("#content_left > div.c-container").forEach(item => {
+        if (!(item.attributes.tpl.nodeValue.includes("new_baikan_index") 
+            || item.attributes.tpl.nodeValue.includes("wenda_generate"))) {
+            item.innerHTML = `<div class="left-inside">${item.innerHTML}</div>`;
+        }
+    });
 
     // 输出
     // finished = true;

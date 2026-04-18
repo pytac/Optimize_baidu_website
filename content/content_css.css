@@ -1,3 +1,5 @@
+
+/*搜索框*/
 #chat-input-main.one-line-input{
     width: 900px;
     height: 50px;
@@ -14,6 +16,7 @@
     left: 5px;
 }
 
+/*搜索框enter*/
 #chat-submit-button{
     width: 100px !important;
     height: 42px !important;
@@ -47,18 +50,39 @@
     border-radius: none !important;
 }
 
-/*底侧切换栏*/
+/*底侧切换栏被选项*/
 .page-inner_2jZi2 > strong{
-    width: 40px;
+    width: 40px !important;
+    border: 2px solid rgb(255, 255, 255) !important;
+    border-radius: 40px !important;
+}
+
+strong > .page-item_M4MDr-pc{
+    width: 40px !important;
     height: 40px;
     border: 2px solid rgb(255, 255, 255) !important;
     border-radius: 40px !important;
 }
 
-strong > .page-item{
-    width: 40px;
-    height: 40px;
+/*底侧切换栏未选项*/
+.page-inner_2jZi2 > a{
     border: 2px solid rgb(255, 255, 255) !important;
     border-radius: 40px !important;
 }
+
+a > .page-item_M4MDr-pc{
+    text-align: center !important;
+    border: 2px solid rgb(255, 255, 255) !important;
+    border-radius: 40px !important;
+}
+
+/*底侧切换栏外围*/
+.page-inner_2jZi2{
+    width: 500px !important;
+    background-color: rgba(255, 0, 0, 0.909) !important;
+    border: 2px solid rgb(255, 255, 255) !important;
+    border-radius: 40px !important;
+    box-shadow: 2px rgba(0, 0, 0, 0.027) !important;
+    padding-top: 7px !important;
+    padding-right: 165px !important;
 }

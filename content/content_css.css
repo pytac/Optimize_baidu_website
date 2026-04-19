@@ -78,11 +78,12 @@ a > .page-item_M4MDr-pc{
 
 /*底侧切换栏外围*/
 .page-inner_2jZi2{
-    width: 500px !important;
-    background-color: rgba(255, 0, 0, 0.909) !important;
+    width: 656px !important;
+    background-color: rgba(244, 244, 244, 0.909) !important;
     border: 2px solid rgb(255, 255, 255) !important;
     border-radius: 40px !important;
     box-shadow: 2px rgba(0, 0, 0, 0.027) !important;
     padding-top: 7px !important;
-    padding-right: 165px !important;
+    padding-right: 9px !important;
+    padding-left: 8px !important;
 }

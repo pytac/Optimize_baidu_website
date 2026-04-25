@@ -9,11 +9,17 @@
     border-color: rgb(138, 175, 255);
     border-image: initial;
     border-radius: 50px !important;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.031);
 }
 
 #content_left > div {
     width: 100%;
     left: 5px;
+}
+
+#s_tab_inner{
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
 }
 
 /*搜索框enter*/
@@ -26,12 +32,40 @@
     box-shadow: none !important;
 }
 
-/*百度选项卡边框调试*/
+
+/*百度AI右侧输出结果*/
+.cos-fold-switch-context{
+    width: 100px !important;
+}
+
+/*百度选项卡调试*/
 .c-container{
-    width: 90%;
+    width: 620px !important;
     background-color: rgba(0, 0, 0, 0.027);
     border: 2px solid rgba(255, 255, 255, 0.909);
     border-radius: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.031);
+    padding-top: 15px !important;
+}
+
+.c-container.xpath-log.new-pmd{
+    padding-bottom: 20px !important;
+    padding-top: 20px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+em{
+    font: bold !important;
+}
+
+.result-op.c-container.new-pmd{
+    padding: 20px !important;
+}
+
+/*百度选项卡news*/
+.left-inside > ._content-border_1q9is_4{
+    width: 610px !important;
 }
 
 /*百度选项卡原边框去除(original_website_result)*/
@@ -49,6 +83,12 @@
     border: none !important;
 }
 
+.left-inside > div > .cosc-card > .cosc-card-content-border.cosc-card-shadow{
+    border: none !important;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+}
+
 /*百度选项卡原边框去除(Baidu_AI_provide)*/
 .cosc-card{
     border: none !important;
@@ -63,6 +103,7 @@
     border: 2px solid #6e8bff !important;
     border-radius: 40px !important;
     box-shadow: 2px solid #7692ff !important;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.031);
 }
 
 strong > .page-item_M4MDr-pc{
@@ -91,6 +132,7 @@ a > .page-item_M4MDr-pc{
     height: 37.999px !important;
     border: 2px solid #6e8bff !important;
     border-radius: 40px !important;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.031);
 }
 
 a > .page-item_M4MDr-pc:hover{
@@ -108,10 +150,10 @@ a > .page-item_M4MDr-pc:hover{
     background-color: rgba(244, 244, 244, 0.909) !important;
     border: 2px solid rgb(255, 255, 255) !important;
     border-radius: 40px !important;
-    box-shadow: 2px rgba(0, 0, 0, 0.027) !important;
     padding-top: 7px !important;
     padding-right: 9px !important;
     padding-left: 8px !important;
     margin-left: 140px !important;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.031);
 }
 

@@ -2,7 +2,7 @@
 
 
 function my_moveAIToRight(right_col,left_col,params){
-    const right_html = `<div class="baidu_ai"> <!-- 百度 AI 模块 --> <!-- 填 --> <hr/> </div>`;
+    const right_html = `<div class="baidu_ai"> <!-- 百度 AI 模块 --> <!-- 填 -->  </div>`;
     right_col.insertAdjacentHTML('beforeend', right_html);
 
     // main
@@ -23,7 +23,7 @@ async function extract_things(right_col, left_col, params){
         <p>官网:<span class="extract_guanwang">未找到</span></p>    <!-- 填 -->
         <p>翻译:<span class="extract_translate">未找到</span></p>   <!-- 填 -->
         <p>百度百科:<span class="extract_baike">未找到</span></p>   <!-- 填 <a href=javascript:void(0);/> 或 <a/>直接跳转-->
-        <hr/>
+        
     </div>
     `;
     right_col.insertAdjacentHTML('beforeend', innerhtml);
@@ -94,7 +94,7 @@ function core_ai(right_col, left_col, params){
             <input type="text" placeholder="输入问题或生成图片"> <!-- 填 '__' -->
             <button href="javascript:void(0);">发送</button>
         </div>
-        <hr/>
+        
     </div>
     `;
     right_col.insertAdjacentHTML('beforeend', innerhtml);

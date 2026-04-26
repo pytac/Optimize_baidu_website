@@ -97,7 +97,8 @@
 }
 
 /*百度选项卡调试*/
-.c-container{
+/*细化 c-container 指定是 content_left 下的，避免重复定义*/
+#content_left > .c-container{
     width: 620px !important;
     background-color: rgba(0, 0, 0, 0.027);
     border: 2px solid rgba(255, 255, 255, 0.909);
@@ -122,6 +123,8 @@ em{
 }
 
 /*右侧栏*/
+
+/* 以下可以合并
 .extract{
     width: 347.99px !important;
     background-color: rgba(0, 0, 0, 0.027);
@@ -150,6 +153,32 @@ em{
     margin-top: 15px !important;
     margin-bottom: 15px !important;
     padding: 5px;
+}
+
+
+.baidu_ai{
+    width: 347.99px !important;
+    background-color: rgba(0, 0, 0, 0.027);
+    border: 2px solid rgba(255, 255, 255, 0.909);
+    border-radius: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.031);
+    padding: 20px;
+    margin-bottom: 15px !important;
+} */
+
+#content_right > div{
+    width: 347.99px !important;
+    background-color: rgba(0, 0, 0, 0.027);
+    border: 2px solid rgba(255, 255, 255, 0.909);
+    border-radius: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.031);
+    padding: 20px;
+    margin-bottom: 15px !important;
+}
+
+#content_right > .baidu_ai > .result-op.c-container.new-pmd{
+    /*工具栏下的baidu_ai内需要调整的左右样式*/
+    width: 100%;
 }
 
 /*按钮*/
@@ -184,16 +213,6 @@ em{
     margin-bottom: 15px !important;
     padding: 5px;
     margin-left: 10px;
-}
-
-.baidu_ai{
-    width: 347.99px !important;
-    background-color: rgba(0, 0, 0, 0.027);
-    border: 2px solid rgba(255, 255, 255, 0.909);
-    border-radius: 30px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.031);
-    padding: 20px;
-    margin-bottom: 15px !important;
 }
 
 /*百度选项卡news*/

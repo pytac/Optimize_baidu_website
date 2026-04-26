@@ -121,6 +121,81 @@ em{
     padding: 20px !important;
 }
 
+/*右侧栏*/
+.extract{
+    width: 347.99px !important;
+    background-color: rgba(0, 0, 0, 0.027);
+    border: 2px solid rgba(255, 255, 255, 0.909);
+    border-radius: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.031);
+    padding: 20px;
+    margin-bottom: 15px !important;
+}
+
+.core_ai{
+    width: 347.99px !important;
+    background-color: rgba(0, 0, 0, 0.027);
+    border: 2px solid rgba(255, 255, 255, 0.909);
+    border-radius: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.031);
+    padding: 20px;
+    margin-bottom: 15px !important;
+}
+
+.core_ai > .inp_bar > #ai_model{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgba(255, 255, 255, 0.909);
+    border-radius: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.031);
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+    padding: 5px;
+}
+
+/*按钮*/
+.core_ai > .inp_bar > button{
+    background-color: #6e8bff;
+    border: 2px solid rgba(255, 255, 255, 0.909);
+    border-radius: 30px;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+    padding: 10px;
+    transition-duration: 0.4s;
+    margin-left: 10px;
+}
+
+.core_ai > .inp_bar > button:hover{
+    width: 52.57px;
+    height: 45.5px;
+    background-color: #6e8bff;
+    border: 2px solid rgba(255, 255, 255, 0.909);
+    border-radius: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.031);
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+    padding: 10px;
+}
+
+.core_ai > .inp_bar > input{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgba(255, 255, 255, 0.909);
+    border-radius: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.031);
+    margin-bottom: 15px !important;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.baidu_ai{
+    width: 347.99px !important;
+    background-color: rgba(0, 0, 0, 0.027);
+    border: 2px solid rgba(255, 255, 255, 0.909);
+    border-radius: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.031);
+    padding: 20px;
+    margin-bottom: 15px !important;
+}
+
 /*百度选项卡news*/
 .left-inside > ._content-border_1q9is_4{
     width: 610px !important;

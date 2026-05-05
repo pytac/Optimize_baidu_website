@@ -126,23 +126,23 @@ em{
 
 /* 以下可以合并
 .extract{
-    width: 347.99px !important;
+    width: 347.99px;
     background-color: rgba(0, 0, 0, 0.027);
     border: 2px solid rgba(255, 255, 255, 0.909);
     border-radius: 30px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.031);
     padding: 20px;
-    margin-bottom: 15px !important;
+    margin-bottom: 15px;
 }
 
 .core_ai{
-    width: 347.99px !important;
+    width: 347.99px;
     background-color: rgba(0, 0, 0, 0.027);
     border: 2px solid rgba(255, 255, 255, 0.909);
     border-radius: 30px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.031);
     padding: 20px;
-    margin-bottom: 15px !important;
+    margin-bottom: 15px;
 }
 
 .core_ai > .inp_bar > #ai_model{
@@ -150,21 +150,31 @@ em{
     border: 2px solid rgba(255, 255, 255, 0.909);
     border-radius: 30px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.031);
-    margin-top: 15px !important;
-    margin-bottom: 15px !important;
+    margin-top: 15px;
+    margin-bottom: 15px;
     padding: 5px;
 }
 
 
 .baidu_ai{
-    width: 347.99px !important;
+    width: 347.99px;
     background-color: rgba(0, 0, 0, 0.027);
     border: 2px solid rgba(255, 255, 255, 0.909);
     border-radius: 30px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.031);
     padding: 20px;
-    margin-bottom: 15px !important;
+    margin-bottom: 15px;
 } */
+
+.core_ai > .inp_bar > #ai_model{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgba(255, 255, 255, 0.909);
+    border-radius: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.031);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 5px;
+}
 
 #content_right > div{
     width: 347.99px !important;
@@ -179,6 +189,11 @@ em{
 #content_right > .baidu_ai > .result-op.c-container.new-pmd{
     /*工具栏下的baidu_ai内需要调整的左右样式*/
     width: 100%;
+    padding-left: 0px !important;
+}
+
+#conten_right > .baidu_ai > .cos-fold-switch.cosd-fold-switch-content_25jKA{
+    width: 100px !important;
 }
 
 /*按钮*/

@@ -45,6 +45,8 @@ div.btn_on_off{
 label p{
     display: inline-block;
     vertical-align: middle;
+    margin-left: 30px;
+    margin-top: 30px; 
 }
 
 /* 导航栏内容导航 ===================================== */
@@ -59,9 +61,22 @@ a{
 
 /* 导航栏内容导航 */
 .item{
+    width: 37.98px;
+    height: 39.681px;
     border: 2px,solid,rgb(255, 255, 255);
     border-radius: 40px;
     background-color:#ffffff;
+    transition-duration: 0.4s;
+}
+
+
+.item:hover{
+    width: 39.98px;
+    height: 41.681px;
+    border: 2px,solid,rgb(255, 255, 255);
+    border-radius: 40px;
+    background-color:rgba(130, 130, 130, 0.214);
+    transition-duration: 0.4s;
 }
 
 /* 背景颜色 */
@@ -79,7 +94,7 @@ body{
 /* 导航栏 */
 .sider {
     overflow: hidden;
-    background-color: rgb(255,255,255,0.25);
+    background-color: rgb(255, 255, 255);
     border:3px,solid,rgb(255, 255, 255);
     border-radius: 40px;
 

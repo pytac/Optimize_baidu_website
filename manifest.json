@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "百度优化插件",
-  "version": "0.2",
+  "version": "1.0",
   "description": "优化百度搜索结果",
   "action": {
     "default_popup": "popup/popup.html",

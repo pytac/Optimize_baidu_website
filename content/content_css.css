@@ -90,6 +90,11 @@
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.031) !important;
 }
 
+/*下拉时搜索框区域*/
+#head.s_down{
+    position: none !important;
+}
+
 
 /*百度AI右侧输出结果*/
 .cos-fold-switch-context{
@@ -205,7 +210,8 @@ em{
     margin-bottom: 15px !important;
     padding: 10px;
     transition-duration: 0.4s;
-    margin-left: 10px;
+    margin-left: 10px ;
+    font: white;
 }
 
 .core_ai > .inp_bar > button:hover{
